@@ -1,0 +1,8 @@
+{
+    "name"              :"myTopItems",
+    "description"       :"Plugin to render a list of top items",
+    "namespace"         :"myTopItems",
+    "author"            :"jh",
+    "type"              :"template",
+    "serviceProvider"   :"myTopItems\\Providers\\TopItemsServiceProvider"
+}
