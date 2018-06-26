@@ -5,11 +5,11 @@ namespace myTopItems\Controllers;
 
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
-use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
+use Plenty\Modules\Item\Variation\Contracts\VariationSearchRepositoryContract;
 
 class ContentController extends Controller
 {
-    public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository)
+    public function showTopItems(Twig $twig, VariationSearchRepositoryContract $itemRepository)
     {
         $itemColumns = [
             'itemDescription' => [
@@ -37,7 +37,7 @@ class ContentController extends Controller
         $itemParams = [
             'language' => 'en'
         ];
- 
+
         $resultItems = $itemRepository
             ->search($itemColumns, $itemFilter, $itemParams);
 
